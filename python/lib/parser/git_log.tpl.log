@@ -1,0 +1,24 @@
+FSM Template:
+Value Required hash ([\da-f]+)
+Value parent1 ([\da-f]+)
+Value parent2 ([\da-f]+)
+Value author ([^\Z]+)
+Value timestamp ([^\Z]+)
+Value message ([^\Z]+)
+Value List files ([^\Z]+)
+
+Start
+  ^commit\s+ -> Continue.Record
+  ^commit\s+${hash}
+  ^Merge:\s+${parent1} ${parent2}
+  ^Author:\s+${author}
+  ^Date:\s+${timestamp}
+  ^\s+${message}
+  ^(?=\S)${files}
+
+
+FSM Table:
+['hash', 'parent1', 'parent2', 'author', 'timestamp', 'message', 'files']
+['d30780744924dcb9aecce3ab126c096afe63c44d', '', '', 'Nells.K.S <louisnells@users.noreply.github.com>', 'Tue Sep 18 01:48:36 2018 +0530', "[nells]: added 'git log' parser template", []]
+['4aa3cd3a89626717c4b1054de265aa7263674700', '', '', 'Nells.K.S <louisnells@users.noreply.github.com>', 'Tue Sep 18 01:34:44 2018 +0530', '[nells]: added README', []]
+
