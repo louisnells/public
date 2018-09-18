@@ -1,8 +1,8 @@
 #
-#  Copyright (c) 2015-2018
-#      Nells.K.S <https://google.com/+NellsKS>
+#   Copyright (c) 2015-2018
+#       Nells.K.S <https://google.com/+NellsKS>
 #
-#  All rights reserved.
+#   All rights reserved.
 #
 Value Required hash ([\da-f]+)
 Value parent1 ([\da-f]+)
