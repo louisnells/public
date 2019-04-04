@@ -11,12 +11,12 @@
 
 import textfsm
 
-oTplFd = open ('git_log.tpl')
-oTxtFd = open ('git_log.txt')
+o_tpl_fd = open ('git_log.tpl')
+o_txt_fd = open ('git_log.txt')
 
-oTplRex = textfsm.TextFSM (oTplFd)
-lData = oTplRex.ParseText (oTxtFd.read ())
+o_tpl_rex = textfsm.TextFSM (o_tpl_fd)
+l_data = o_tpl_rex.ParseText (o_txt_fd.read ())
 
-print (oTplRex.header)
-for lEntry in lData:
-	print (lEntry)
+print (o_tpl_rex.header)
+for l_entry in l_data:
+	print (l_entry)
