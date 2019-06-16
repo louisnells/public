@@ -13,6 +13,13 @@ from pprint import pformat
 import json, yaml
 
 
+__func_bt__ = lambda: (
+	inspect.stack ()
+)
+__func_li__ = lambda bt, level = 0: (
+	bt[level + 1][3] if level + 1 < len (bt) else None
+)
+
 __func__	= lambda level = 0: (
 	inspect.stack ()[level + 1][3]
 )
